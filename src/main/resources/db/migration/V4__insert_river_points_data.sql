@@ -1,0 +1,50 @@
+INSERT INTO river_point (
+    name,
+    type,
+    river_id,
+    river_km,
+    river_order,
+    latitude,
+    longitude,
+    description
+)
+VALUES
+('Lipusz start', 'START',
+ (SELECT id FROM river WHERE name='Wda'),
+ 0.0,
+ 1,
+ 54.0985,
+ 17.7840,
+ 'Popularne miejsce rozpoczęcia spływu'),
+
+('Borsk pole namiotowe', 'CAMP',
+ (SELECT id FROM river WHERE name='Wda'),
+ 18.5,
+ 2,
+ 53.9875,
+ 17.8842,
+ 'Duże pole namiotowe nad jeziorem Wdzydze'),
+
+('Wdzydze Kiszewskie', 'FOOD',
+ (SELECT id FROM river WHERE name='Wda'),
+ 24.0,
+ 3,
+ 53.9990,
+ 17.8945,
+ 'Sklepy i restauracje w centrum miejscowości'),
+
+('Czarna Woda', 'CAMP',
+ (SELECT id FROM river WHERE name='Wda'),
+ 58.0,
+ 4,
+ 53.8422,
+ 18.1010,
+ 'Popularna baza kajakowa'),
+
+('Tleń', 'END',
+ (SELECT id FROM river WHERE name='Wda'),
+ 97.0,
+ 5,
+ 53.5875,
+ 18.2050,
+ 'Częste miejsce zakończenia spływów');
