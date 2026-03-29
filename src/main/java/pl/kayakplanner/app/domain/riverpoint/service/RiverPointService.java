@@ -35,6 +35,7 @@ public class RiverPointService {
                 .orElseThrow(() -> new EntityNotFoundException("River point not found"));
 
         riverPoint.setName(request.name());
+        riverPoint.setRiver(request.river());
         riverPoint.setType(request.type());
         riverPoint.setRiverKm(request.riverKm());
         riverPoint.setLatitude(request.latitude());

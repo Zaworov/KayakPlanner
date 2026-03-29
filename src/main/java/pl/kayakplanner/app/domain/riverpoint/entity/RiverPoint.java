@@ -4,7 +4,26 @@ import jakarta.persistence.*;
 import lombok.*;
 import pl.kayakplanner.app.domain.river.entity.River;
 import pl.kayakplanner.app.domain.riverpoint.RiverPointType;
+import pl.kayakplanner.app.domain.riversection.entity.RiverSection;
+import pl.kayakplanner.app.domain.route.entity.Route;
 
+/**
+ * Represents a specific, identifiable point along a {@link River}.
+ *
+ * A RiverPoint describes a precise location that can be used as a reference
+ * for navigation, planning, or defining boundaries of a {@link RiverSection}.
+ * Examples include bridges, towns, hazards, or arbitrary user-defined spots.
+ *
+ * A RiverPoint may be defined by:
+ * - geographic coordinates (latitude, longitude)
+ * - river kilometer (distance along the river)
+ *
+ * It is used as:
+ * - a start or end point of a {@link RiverSection}
+ * - a building block for user-defined {@link Route}
+ *
+ * RiverPoints are reusable and can be shared across multiple sections and routes.
+ */
 @Entity
 @Table(name = "river_point")
 @Getter

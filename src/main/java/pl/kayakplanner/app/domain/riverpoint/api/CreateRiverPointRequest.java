@@ -1,10 +1,12 @@
 package pl.kayakplanner.app.domain.riverpoint.api;
 
 import jakarta.validation.constraints.NotBlank;
+import pl.kayakplanner.app.domain.river.entity.River;
 import pl.kayakplanner.app.domain.riverpoint.RiverPointType;
 
 public record CreateRiverPointRequest(
         @NotBlank String name,
+        River river,
         Double riverKm,
         Double latitude,
         Double longitude,

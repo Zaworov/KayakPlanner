@@ -4,6 +4,9 @@ import lombok.AllArgsConstructor;
 import lombok.Setter;
 import pl.kayakplanner.app.domain.river.entity.River;
 
+/***
+ * DTO representation of entity: {@link River}.
+ */
 @AllArgsConstructor
 @Setter
 public class RiverDto {
