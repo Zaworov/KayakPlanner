@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 import pl.kayakplanner.app.domain.river.entity.River;
 import pl.kayakplanner.app.domain.riverpoint.entity.RiverPoint;
-import pl.kayakplanner.app.domain.riversection.RiverSectionSource;
+import pl.kayakplanner.app.domain.utils.Source;
 
 /**
  * Represents a larger, logical, and reusable part of a river.
@@ -51,7 +51,7 @@ public class RiverSection {
 
     private Double endKm;
 
-    private RiverSectionSource source;
+    private Source source;
 
     @ManyToOne
     @JoinColumn(name="start_point_id")
@@ -93,7 +93,7 @@ public class RiverSection {
             RiverPoint start_point,
             RiverPoint end_point,
             String description,
-            RiverSectionSource source
+            Source source
     ) {
         this.river = river;
         this.name = name;
