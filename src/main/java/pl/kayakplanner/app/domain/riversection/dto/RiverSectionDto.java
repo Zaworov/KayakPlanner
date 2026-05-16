@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Setter;
 import pl.kayakplanner.app.domain.river.entity.River;
 import pl.kayakplanner.app.domain.riverpoint.dto.RiverPointDto;
-import pl.kayakplanner.app.domain.riversection.RiverSectionSource;
+import pl.kayakplanner.app.domain.utils.Source;
 import pl.kayakplanner.app.domain.riversection.entity.RiverSection;
 
 /***
@@ -23,7 +23,7 @@ public class RiverSectionDto {
 
     private Double endKm;
 
-    private RiverSectionSource source;
+    private Source source;
 
     private RiverPointDto startPoint;
 
