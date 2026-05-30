@@ -1,13 +1,18 @@
 package pl.kayakplanner.app.domain.river.dto;
 
 import lombok.AllArgsConstructor;
+import lombok.Getter;
 import lombok.Setter;
 import pl.kayakplanner.app.domain.river.entity.River;
+import pl.kayakplanner.app.domain.riverpoint.dto.RiverPointDto;
+
+import java.util.List;
 
 /***
  * DTO representation of entity: {@link River}.
  */
 @AllArgsConstructor
+@Getter
 @Setter
 public class RiverDto {
     private Long id;
@@ -22,6 +27,8 @@ public class RiverDto {
 
     private String description;
 
+    private List<RiverPointDto> riverPoints;
+
     public static RiverDto from(River river) {
         return new RiverDto(
                 river.getId(),
@@ -29,8 +36,11 @@ public class RiverDto {
                 river.getLengthKm(),
                 river.getCountry(),
                 river.getRegion(),
-                river.getDescription()
-        );
+                river.getDescription(),
+
+                river.getPoints().stream()
+                        .map(RiverPointDto::from)
+                        .toList());
     }
 
     public River toEntity() {
