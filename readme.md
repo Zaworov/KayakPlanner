@@ -11,3 +11,7 @@ Its aim of this project is to help organising kayak trips for family and friends
 
 ## Running app
 `./gradlew bootRun`
+
+## Running frontend
+- go to /frontend directory
+`npm run dev`

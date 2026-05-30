@@ -5,6 +5,9 @@ import lombok.*;
 import pl.kayakplanner.app.domain.riverpoint.entity.RiverPoint;
 import pl.kayakplanner.app.domain.riversection.entity.RiverSection;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Represents a river as a top-level, canonical domain entity.
  *
@@ -44,6 +47,9 @@ public class River{
 
     @Column(length = 2000)
     private String description;
+
+    @OneToMany(mappedBy = "river")
+    private List<RiverPoint> points = new ArrayList<>();
 
     @Builder(setterPrefix = "with")
     private River(
