@@ -1,11 +1,10 @@
-package pl.kayakplanner.app.domain.riversection.dto;
+package pl.kayakplanner.app.domain.river.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Setter;
 import pl.kayakplanner.app.domain.river.entity.River;
-import pl.kayakplanner.app.domain.riverpoint.dto.RiverPointDto;
 import pl.kayakplanner.app.domain.utils.Source;
-import pl.kayakplanner.app.domain.riversection.entity.RiverSection;
+import pl.kayakplanner.app.domain.river.entity.RiverSection;
 
 /***
  * DTO representation of entity: {@link RiverSection}.

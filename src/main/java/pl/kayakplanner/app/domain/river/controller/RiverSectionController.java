@@ -1,10 +1,11 @@
-package pl.kayakplanner.app.domain.riversection.api;
+package pl.kayakplanner.app.domain.river.controller;
 
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
-import pl.kayakplanner.app.domain.riversection.dto.RiverSectionDto;
-import pl.kayakplanner.app.domain.riversection.service.RiverSectionService;
+import pl.kayakplanner.app.domain.river.api.CreateRiverSectionRequest;
+import pl.kayakplanner.app.domain.river.dto.RiverSectionDto;
+import pl.kayakplanner.app.domain.river.service.RiverSectionService;
 
 import java.util.List;
 

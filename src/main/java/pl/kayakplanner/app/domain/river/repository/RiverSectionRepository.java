@@ -1,7 +1,7 @@
-package pl.kayakplanner.app.domain.riversection.repository;
+package pl.kayakplanner.app.domain.river.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import pl.kayakplanner.app.domain.riversection.entity.RiverSection;
+import pl.kayakplanner.app.domain.river.entity.RiverSection;
 
 import java.util.Optional;
 

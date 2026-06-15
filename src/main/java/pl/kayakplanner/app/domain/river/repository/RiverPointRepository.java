@@ -1,7 +1,7 @@
-package pl.kayakplanner.app.domain.riverpoint.repository;
+package pl.kayakplanner.app.domain.river.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import pl.kayakplanner.app.domain.riverpoint.entity.RiverPoint;
+import pl.kayakplanner.app.domain.river.entity.RiverPoint;
 
 import java.util.Optional;
 

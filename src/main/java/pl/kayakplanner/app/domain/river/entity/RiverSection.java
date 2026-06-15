@@ -1,9 +1,7 @@
-package pl.kayakplanner.app.domain.riversection.entity;
+package pl.kayakplanner.app.domain.river.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
-import pl.kayakplanner.app.domain.river.entity.River;
-import pl.kayakplanner.app.domain.riverpoint.entity.RiverPoint;
 import pl.kayakplanner.app.domain.utils.Source;
 
 /**

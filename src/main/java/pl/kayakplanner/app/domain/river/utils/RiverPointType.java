@@ -1,4 +1,4 @@
-package pl.kayakplanner.app.domain.riverpoint;
+package pl.kayakplanner.app.domain.river.utils;
 
 public enum RiverPointType {
     TOWN,

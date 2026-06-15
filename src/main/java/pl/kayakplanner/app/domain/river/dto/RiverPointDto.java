@@ -1,11 +1,10 @@
-package pl.kayakplanner.app.domain.riverpoint.dto;
+package pl.kayakplanner.app.domain.river.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
-import pl.kayakplanner.app.domain.river.entity.River;
-import pl.kayakplanner.app.domain.riverpoint.RiverPointType;
-import pl.kayakplanner.app.domain.riverpoint.entity.RiverPoint;
+import pl.kayakplanner.app.domain.river.utils.RiverPointType;
+import pl.kayakplanner.app.domain.river.entity.RiverPoint;
 
 @AllArgsConstructor
 @Setter
@@ -43,11 +42,8 @@ public class RiverPointDto {
     }
 
     public RiverPoint toEntity() {
-//        River river = new River();
-//        river.setId(id);
         return RiverPoint.builder()
                 .withName(name)
-//                .withRiver(river)
                 .withRiverKm(riverKm)
                 .withRiverOrder(riverOrder)
                 .withLatitude(latitude)

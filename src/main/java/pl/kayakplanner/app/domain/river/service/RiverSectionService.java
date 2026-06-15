@@ -1,12 +1,11 @@
-package pl.kayakplanner.app.domain.riversection.service;
+package pl.kayakplanner.app.domain.river.service;
 
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.stereotype.Service;
-import pl.kayakplanner.app.domain.river.entity.River;
-import pl.kayakplanner.app.domain.riversection.api.CreateRiverSectionRequest;
-import pl.kayakplanner.app.domain.riversection.dto.RiverSectionDto;
-import pl.kayakplanner.app.domain.riversection.entity.RiverSection;
-import pl.kayakplanner.app.domain.riversection.repository.RiverSectionRepository;
+import pl.kayakplanner.app.domain.river.api.CreateRiverSectionRequest;
+import pl.kayakplanner.app.domain.river.dto.RiverSectionDto;
+import pl.kayakplanner.app.domain.river.entity.RiverSection;
+import pl.kayakplanner.app.domain.river.repository.RiverSectionRepository;
 
 import java.util.List;
 
