@@ -2,8 +2,12 @@ package pl.kayakplanner.app.domain.route.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
-import pl.kayakplanner.app.domain.riverpoint.entity.RiverPoint;
-import pl.kayakplanner.app.domain.riversection.entity.RiverSection;
+import pl.kayakplanner.app.domain.river.entity.River;
+import pl.kayakplanner.app.domain.river.entity.RiverPoint;
+import pl.kayakplanner.app.domain.river.entity.RiverSection;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Represents a user-defined kayaking route along a river.
@@ -42,4 +46,19 @@ public class Route {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    private String name;
+
+    private String description;
+
+    @OneToMany(mappedBy = "route")
+    private List<RoutePoint> points = new ArrayList<>();
+
+    @Builder(setterPrefix = "with")
+    private Route(
+            String name,
+            String description
+    ) {
+        this.name = name;
+        this.description = description;
+    }
 }

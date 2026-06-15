@@ -4,7 +4,6 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 import pl.kayakplanner.app.domain.river.entity.River;
-import pl.kayakplanner.app.domain.riverpoint.dto.RiverPointDto;
 
 import java.util.List;
 
